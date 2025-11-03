@@ -193,7 +193,7 @@ export default function TaskForm({ onSuccess }: TaskFormProps) {
           </label>
           <div className="space-y-2">
             <div className="flex flex-wrap gap-2">
-              {watch('tags', []).map((tag, index) => (
+              {watch('tags', []).map((tag: string, index: number) => (
                 <span
                   key={index}
                   className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary-100 text-primary-800"
