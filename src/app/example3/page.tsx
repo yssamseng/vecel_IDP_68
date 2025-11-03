@@ -118,7 +118,7 @@ export default function ListExample() {
             {filteredItems.map((item) => (
               <Link
                 key={item.id}
-                href={`/example2/${item.id}`}
+                href={`/example3/${item.id}`}
                 className="card hover:scale-105 transform transition-all duration-200 cursor-pointer group"
               >
                 <div className="flex justify-between items-start mb-3">
