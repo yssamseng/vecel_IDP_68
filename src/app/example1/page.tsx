@@ -226,12 +226,6 @@ function TypographyDemo() {
             <p className="text-left text-sm mb-2">Left aligned text (text-left)</p>
             <p className="text-center text-sm mb-2">Center aligned text (text-center)</p>
             <p className="text-right text-sm mb-2">Right aligned text (text-right)</p>
-            <p className="text-justify text-sm mb-4">Justified text with more content to demonstrate how it fills the available space by adjusting word spacing. (text-justify)</p>
-
-            <p className="tracking-wider text-sm mb-2">Wide letter spacing (tracking-wider)</p>
-            <p className="tracking-tight text-sm mb-2">Tight letter spacing (tracking-tight)</p>
-            <p className="leading-loose text-sm mb-2">Loose line height (leading-loose)</p>
-            <p className="leading-tight text-sm">Tight line height (leading-tight)</p>
           </div>
         </div>
       </div>
@@ -240,6 +234,7 @@ function TypographyDemo() {
 }
 
 function ColorsDemo({ isDark, setIsDark }: { isDark: boolean; setIsDark: (dark: boolean) => void }) {
+  const shades = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
   return (
     <div className="space-y-8">
       {/* Color Palette */}
@@ -251,12 +246,46 @@ function ColorsDemo({ isDark, setIsDark }: { isDark: boolean; setIsDark: (dark: 
           <div>
             <h3 className="text-lg font-medium mb-3">Primary Colors</h3>
             <div className="grid grid-cols-5 gap-2">
-              {[50, 100, 200, 300, 400, 500, 600, 700, 800, 900].map((shade) => (
-                <div key={shade} className="text-center">
-                  <div className={`h-16 bg-primary-${shade} rounded border border-gray-300`}></div>
-                  <p className="text-xs mt-1">{shade}</p>
-                </div>
-              ))}
+              <div className="text-center">
+                <div className={`h-16 bg-primary-50 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">50</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-100 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">100</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-200 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">200</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-300 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">300</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-400 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">400</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-500 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">500</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-600 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">600</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-700 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">700</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-800 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">800</p>
+              </div>
+              <div className="text-center">
+                <div className={`h-16 bg-primary-900 rounded border border-gray-300`}></div>
+                <p className="text-xs mt-1">900</p>
+              </div>
             </div>
           </div>
 
