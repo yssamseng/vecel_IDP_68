@@ -163,54 +163,6 @@ export default function FormExample() {
             </div>
           </div>
         </div>
-
-        {/* Instructions */}
-        <div className="mt-12 card">
-          <h2 className="text-xl font-semibold mb-4">📋 คำอธิบาย Form Validation</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold mb-2">Client-Side Validation:</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• <strong>React Hook Form</strong> - จัดการฟอร์มอย่างมีประสิทธิภาพ</li>
-                <li>• <strong>Zod Resolver</strong> - ใช้ Zod schema สำหรับ validation</li>
-                <li>• <strong>Real-time Validation</strong> - ตรวจสอบข้อมูลทันที</li>
-                <li>• <strong>Error Messages</strong> - แสดงข้อผิดพลาดที่เข้าใจง่าย</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Server-Side Validation:</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• <strong>Server Actions</strong> - ประมวลผลฝั่งเซิร์ฟเวอร์</li>
-                <li>• <strong>Double Validation</strong> - ตรวจสอบซ้ำที่ server</li>
-                <li>• <strong>Type Safety</strong> - ใช้ schema เดียวกันทั้งสองฝั่ง</li>
-                <li>• <strong>Security</strong> - ป้องกันข้อมูลไม่ถูกต้อง</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <h3 className="font-semibold text-blue-800 mb-2">🔧 DRY Principle:</h3>
-            <p className="text-sm text-blue-700">
-              ใช้ Zod schema เดียวกันสำหรับทั้ง client และ server validation
-              ทำให้มั่นใจได้ว่าข้อมูลถูกตรวจสอบด้วยกฎเดียวกันทุกที่
-              และ TypeScript สามารถ infer types จาก schema ได้อัตโนมัติ
-            </p>
-          </div>
-
-          <div className="mt-6">
-            <h3 className="font-semibold mb-2">Schema Definition:</h3>
-            <pre className="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto">
-{`const TaskSchema = z.object({
-  title: z.string().min(1).max(100),
-  description: z.string().max(500).optional(),
-  priority: z.enum(['low', 'medium', 'high']),
-  status: z.enum(['pending', 'in_progress', 'completed']),
-  dueDate: z.string().optional(),
-  tags: z.array(z.string()).default([]),
-});`}
-            </pre>
-          </div>
-        </div>
       </div>
     </div>
   );
