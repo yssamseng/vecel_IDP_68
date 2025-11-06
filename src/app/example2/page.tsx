@@ -234,16 +234,21 @@ export default function StateExample() {
             </div>
 
             {/* Code Snippets */}
-            {/* <div className="card">
-              <h2 className="text-xl font-semibold mb-4">Code create useState</h2>
+            <div className="card">
+              <h2 className="text-xl font-semibold mb-4">Code useState</h2>
               <pre className="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto">
-                {"const [state, setState] = useState<StateExample>({counter: 0,message: '',isVisible: true,items: []});"}
+                {`const [state, setState] = useState<StateExample>({
+  counter: 0,
+  message: '',
+  isVisible: true,
+  items: [],
+});`}
               </pre>
-            </div> */}
+            </div>
 
             {/* Derived State Display */}
-            {/* <div className="card">
-              <h2 className="text-xl font-semibold mb-4">Current State (JSON)</h2>
+            <div className="card">
+              <h2 className="text-xl font-semibold mb-4">Code useMemo</h2>
               <pre className="bg-gray-900 text-green-400 p-4 rounded-lg text-sm overflow-x-auto">
                 {
                   `const derivedState = useMemo(() => {
@@ -251,33 +256,8 @@ export default function StateExample() {
 }, [state]);`
                 }
               </pre>
-            </div> */}
+            </div>
             
-          </div>
-        </div>
-
-        {/* Instructions */}
-        <div className="mt-8 card">
-          <h2 className="text-xl font-semibold mb-4">📋 คำอธิบายการทำงาน</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold mb-2">State Management Concepts:</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• <strong>useState</strong> - จัดการ state ใน component</li>
-                <li>• <strong>Derived State</strong> - ค่าที่คำนวณจาก state อื่น</li>
-                <li>• <strong>Conditional Rendering</strong> - แสดง/ซ่อน component</li>
-                <li>• <strong>Array Operations</strong> - เพิ่ม/ลบ items ใน array</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Best Practices:</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• ใช้ <strong>useMemo</strong> สำหรับ derived state</li>
-                <li>• อัปเดต state แบบ immutable</li>
-                <li>• แยก state ตามความเกี่ยวข้อง</li>
-                <li>• ใช้ TypeScript เพื่อ type safety</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
