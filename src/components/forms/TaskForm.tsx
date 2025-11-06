@@ -186,47 +186,6 @@ export default function TaskForm({ onSuccess }: TaskFormProps) {
           )}
         </div>
 
-        {/* Tags */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Tags
-          </label>
-          <div className="space-y-2">
-            <div className="flex flex-wrap gap-2">
-              {watch('tags', []).map((tag: string, index: number) => (
-                <span
-                  key={index}
-                  className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-primary-100 text-primary-800"
-                >
-                  {tag}
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const currentTags = watch('tags', []);
-                      const newTags = removeTag(currentTags, tag);
-                      setValue('tags', newTags);
-                    }}
-                    className="ml-2 text-primary-600 hover:text-primary-800"
-                  >
-                    ×
-                  </button>
-                </span>
-              ))}
-            </div>
-            <button
-              type="button"
-              onClick={() => {
-                const currentTags = watch('tags', []);
-                const newTags = addTag(currentTags);
-                setValue('tags', newTags);
-              }}
-              className="text-sm text-primary-600 hover:text-primary-700"
-            >
-              + เพิ่ม tag
-            </button>
-          </div>
-        </div>
-
         {/* Error Message */}
         {submitError && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
