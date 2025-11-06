@@ -725,36 +725,6 @@ space-y-2 sm:space-y-4 md:space-y-6 lg:space-y-8`}
           Resize your browser window to see different content based on screen size.
         </p>
       </div>
-
-      {/* Mobile First Demo */}
-      <div className="card">
-        <h2 className="text-xl font-semibold mb-4">Mobile-First Approach</h2>
-
-        <div className="bg-gray-50 p-4 rounded-lg">
-          <h3 className="font-medium mb-2">Mobile-First Benefits:</h3>
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>✅ Better performance on mobile devices</li>
-            <li>✅ Cleaner, more maintainable code</li>
-            <li>✅ Progressive enhancement approach</li>
-            <li>✅ Easier to debug and test</li>
-          </ul>
-
-          <div className="mt-4 p-3 bg-white rounded border">
-            <code className="text-xs">
-              {`/* Mobile-first approach */}
-.className {
-  /* Base styles for mobile */
-  padding: 1rem;
-
-  /* Enhance for larger screens */
-  @media (min-width: 768px) {
-    padding: 2rem;
-  }
-}`}
-            </code>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
