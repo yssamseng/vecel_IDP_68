@@ -155,38 +155,6 @@ export default function ListExample() {
             ))}
           </div>
         )}
-
-        {/* Instructions */}
-        <div className="mt-12 card">
-          <h2 className="text-xl font-semibold mb-4">📋 คำอธิบายการทำงาน</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="font-semibold mb-2">Dynamic Routing Concepts:</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• <strong>Dynamic Routes</strong> - /example2/[id]</li>
-                <li>• <strong>Link Navigation</strong> - คลิกที่ card เพื่อดูรายละเอียด</li>
-                <li>• <strong>notFound</strong> - จัดการกรณีไม่พบข้อมูล</li>
-                <li>• <strong>URL Parameters</strong> - รับค่า id จาก URL</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Data Management:</h3>
-              <ul className="space-y-1 text-sm text-gray-600">
-                <li>• <strong>Search Functionality</strong> - ค้นหาแบบ real-time</li>
-                <li>• <strong>Category Filter</strong> - กรองตามหมวดหมู่</li>
-                <li>• <strong>Derived State</strong> - ใช้ useMemo สำหรับ performance</li>
-                <li>• <strong>Type Safety</strong> - ListItem จาก Zod schema</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <p className="text-sm text-blue-800">
-              <strong>ลองคลิกที่รายการใดรายการหนึ่ง</strong> เพื่อไปยังหน้ารายละเอียด (dynamic routing)
-              และลองค้นหาหรือกรองข้อมูลเพื่อดูการทำงานของ search/filter functionality
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   );

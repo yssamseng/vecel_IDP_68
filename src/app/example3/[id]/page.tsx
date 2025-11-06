@@ -49,7 +49,7 @@ export default function ItemDetailPage({ params }: { params: { id: string } }) {
         {/* Breadcrumb */}
         <div className="mb-6">
           <Link
-            href="/example2"
+            href="/example3"
             className="text-primary-600 hover:text-primary-700 text-sm"
           >
             ← กลับไปหน้ารายการ
@@ -125,77 +125,6 @@ export default function ItemDetailPage({ params }: { params: { id: string } }) {
                 </div>
               </dl>
             </div>
-          </div>
-
-          {/* Additional Metadata */}
-          {item.metadata && Object.keys(item.metadata).length > 0 && (
-            <div>
-              <h3 className="text-lg font-semibold mb-3">ข้อมูลเพิ่มเติม</h3>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <pre className="text-sm text-gray-700 overflow-x-auto">
-                  {JSON.stringify(item.metadata, null, 2)}
-                </pre>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Actions */}
-        <div className="flex space-x-4 mb-8">
-          <button className="btn-primary">
-            แก้ไขข้อมูล
-          </button>
-          <button className="btn-secondary">
-            สำเนาข้อมูล
-          </button>
-          <button className="btn-secondary text-red-600 hover:text-red-700">
-            ลบรายการ
-          </button>
-        </div>
-
-        {/* Related Items */}
-        <div className="card">
-          <h2 className="text-xl font-semibold mb-4">รายการที่เกี่ยวข้อง</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {mockItems
-              .filter(relatedItem =>
-                relatedItem.id !== item.id &&
-                relatedItem.category === item.category
-              )
-              .slice(0, 4)
-              .map(relatedItem => (
-                <Link
-                  key={relatedItem.id}
-                  href={`/example2/${relatedItem.id}`}
-                  className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-                >
-                  <h3 className="font-medium text-gray-900 mb-1">
-                    {relatedItem.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">
-                    {relatedItem.description}
-                  </p>
-                </Link>
-              ))}
-          </div>
-        </div>
-
-        {/* Instructions */}
-        <div className="mt-8 card">
-          <h2 className="text-xl font-semibold mb-4">📋 คำอธิบาย Dynamic Routing</h2>
-          <div className="space-y-4 text-sm text-gray-600">
-            <p>
-              <strong>Dynamic Route:</strong> /example2/[id] - ใช้สำหรับแสดงรายละเอียดของแต่ละรายการ
-            </p>
-            <p>
-              <strong>notFound():</strong> ฟังก์ชันของ Next.js สำหรับจัดการกรณีที่ไม่พบข้อมูล
-            </p>
-            <p>
-              <strong>generateStaticParams():</strong> สร้าง static pages ล่วงหน้าเพื่อ performance
-            </p>
-            <p>
-              <strong>Type Safety:</strong> ใช้ ListItem type จาก Zod schema เพื่อความปลอดภัย
-            </p>
           </div>
         </div>
       </div>
