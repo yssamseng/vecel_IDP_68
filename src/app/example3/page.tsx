@@ -6,15 +6,16 @@ import { ListItem, generateMockListItems } from '@/lib/models';
 import { searchInList, filterByCategory, delay } from '@/lib/utils';
 
 export default function ListExample() {
-  // const [items] = useState<ListItem[]>(generateMockListItems(15));
   const [items, setItems] = useState<ListItem[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [isLoading, setIsLoading] = useState(true);
 
   // useEffect mock get items from server
   useEffect(() => {
     delay(300).then(() => {
       setItems(generateMockListItems(15));
+      setIsLoading(false);
     });
   }, []);
 
@@ -101,7 +102,12 @@ export default function ListExample() {
       </div>
 
       {/* List Grid */}
-      {filteredItems.length === 0 ? (
+      {isLoading ? (
+        <div className="flex flex-col items-center justify-center py-12">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mb-4"></div>
+          <p className="text-gray-500 text-lg">กำลังโหลดข้อมูล...</p>
+        </div>
+      ) : filteredItems.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg">
             ไม่พบรายการที่ตรงกับเงื่อนไข
