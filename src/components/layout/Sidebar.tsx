@@ -16,7 +16,7 @@ const navigation = [
   // { name: 'หน้าแรก', href: '/', icon: Home },
   { name: 'Tailwind CSS', href: '/example1', icon: Palette },
   { name: 'State Example', href: '/example2', icon: BarChart3 },
-  { name: 'List Example', href: '/example3', icon: List },
+  { name: 'List & Route Example', href: '/example3', icon: List },
   { name: 'Form Example', href: '/example4', icon: FileText },
   // { name: 'Presentation', href: '/presentation', icon: Presentation },
 ];
