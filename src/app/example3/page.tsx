@@ -13,7 +13,7 @@ export default function ListExample() {
 
   // useEffect mock get items from server
   useEffect(() => {
-    delay(500).then(() => {
+    delay(400).then(() => {
       setItems(generateMockListItems(15));
       setIsLoading(false);
     });
