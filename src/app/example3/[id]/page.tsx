@@ -44,8 +44,7 @@ export default function ItemDetailPage({ params }: { params: { id: string } }) {
   };
 
   return (
-    <div className="p-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="">
         {/* Breadcrumb */}
         <div className="mb-6">
           <Link
@@ -128,6 +127,5 @@ export default function ItemDetailPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
