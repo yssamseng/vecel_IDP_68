@@ -586,8 +586,8 @@ function AnimationsDemo() {
             <code className="block mt-2 text-sm bg-gray-900 text-green-400 p-2 rounded">
               {`// In tailwind.config.js
 animations: {
-  'fade-in': 'fadeIn 0.5s ease-in-out',
-  'slide-up': 'slideUp 0.3s ease-out',
+  'fade-in': 'fadeIn 2.5s ease-in-out',
+  'slide-up': 'slideUp 2.3s ease-out',
 }`}
             </code>
           </div>
